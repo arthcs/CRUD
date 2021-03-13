@@ -10,7 +10,7 @@ $stmt = $PDO->prepare("SELECT codigo,nome,email,cidade,estado,cep,sexo,cartao_cr
 $stmt->bindParam(':codigo', $codigo, PDO::PARAM_INT);
 $stmt->execute();
 $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
-if ($resultado = ""){
+if ($resultado == ""){
     echo "Esse nome não foi encontrado na tabela";
     exit;
 }?>
